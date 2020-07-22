@@ -1,0 +1,65 @@
+{
+    "name": "VerneMQ",
+    "version": "1.10.3",
+    "slug": "vernemq",
+    "description": "A MQTT broker that is scalable, enterprise ready, and open source.",
+    "url": "https://github.com/richard-scott/hassio-addons",
+    "arch": ["amd64"],
+    "startup": "system",
+    "boot": "auto",
+    "map": ["ssl"],
+    "discovery": ["mqtt"],
+    "services": ["mqtt:provide"],
+    "auth_api": true,
+    "ports": {
+      "1883/tcp": 1883,
+      "8883/tcp": 8883,
+      "8888/tcp": 8888,
+      "8889/tcp": 8889,
+      "9000/tcp": 9000,
+      "9001/tcp": 9001
+     },
+    "ports_description": {
+      "1883/tcp": "MQTT",
+      "8883/tcp": "MQTT (SSL)",
+      "8888/tcp": "Prometheus Metrics",
+      "8889/tcp": "Prometheus Metrics (SSL)",
+      "9000/tcp": "MQTT Websockets (SSL)",
+      "9001/tcp": "MQTT Websockets (SSL)"
+     },
+     "options": {
+       "logins": [
+         {
+           "username": "user",
+           "password": "password"
+         }
+      ],
+      "log_level": "error",
+      "max_db_memory_percentage": "10",
+      "allowed_protocol_versions": "3,4,5",
+      "websockets": true,
+      "http": true,
+      "ssl": false,
+      "certfile": "cert.pem",
+      "cafile": "fullchain.pem",
+      "keyfile": "privkey.pem"
+    },
+    "schema": {
+      "logins": [
+        {
+          "username": "str",
+          "password": "str"
+        }
+      ],
+      "websockets": "bool",
+      "http": "bool",
+      "log_level": "str",
+      "max_db_memory_percentage": "str",
+      "allowed_protocol_versions": "str",
+      "ssl": "bool",
+      "certfile": "str",
+      "cafile": "str",
+      "keyfile": "str"
+    }
+  }
+  
