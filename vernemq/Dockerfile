@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
-ENV VERNEMQ_VERSION=1.10.3
+ENV VERNEMQ_VERSION=1.10.4.1
 
 RUN apt-get update
 RUN apt-get install --yes pwgen curl dnsutils facter nano less
