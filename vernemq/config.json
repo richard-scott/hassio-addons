@@ -1,6 +1,6 @@
 {
     "name": "VerneMQ",
-    "version": "1.10.4.1",
+    "version": "1.11.0",
     "slug": "vernemq",
     "description": "A MQTT broker that is scalable, enterprise ready, and open source.",
     "url": "https://github.com/richard-scott/hassio-addons",
